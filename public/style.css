@@ -1,0 +1,133 @@
+body {
+    font-family: Times New Roman, serif ;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f7f2fa;
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+h2 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+h3 {
+    margin-top: 0;
+    font-size: 24px;
+}
+
+form {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    box-sizing: border-box;
+    border: 1px solid #d8c4e8;
+    border-radius: 6px;
+    background-color: #faf8fc;
+    font-family: "Times New Roman", serif;
+    font-size: 16px;
+}
+
+
+article {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: 1px solid #e5d9ed;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+button {
+    background-color: #8f6bb3;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 15px;
+    font-family: "Times New Roman", serif;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.85;
+}
+
+a {
+    display: inline-block;
+    background-color: #d8c4e8;
+    color: #333;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+a:hover {
+    opacity: 0.8;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    form {
+        padding: 15px;
+    }
+
+    article {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+}
+
+/* Container for edit and delete buttons */
+.post-actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/* Remove default form styling inside post actions */
+.post-actions form {
+    margin: 0;
+    padding: 0;
+    background: none;
+}
+
+/* Space between form labels and fields */
+label {
+    display: inline-block;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+/* Space between paragraphs */
+p {
+    line-height: 1.6;
+}
+
+/* Make long blog content wrap properly */
+article {
+    overflow-wrap: anywhere;
+}

@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- set the character encoding -->
+    <meta charset="UTF-8">
+
+    <!-- make the page responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- title shown in the browser -->
+    <title>Edit Post</title>
+
+    <!-- link to the CSS file -->
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <!-- page heading -->
+    <h1>Edit Blog Post</h1>
+
+    <!-- form for editing the blog post -->
+    <form action="/edit/<%= post.blog_id %>" method="POST">
+
+        <!-- display the original creator's name -->
+        <p>By <%= post.creator_name %></p>
+
+        <!-- input for editing blog title -->
+        <label for="title">Blog Title:</label>
+        <input type="text" id="title" name="title"
+               value="<%= post.title %>" required>
+
+        <br><br>
+
+        <!-- text area containing the current post content -->
+        <label for="content">Blog Post:</label>
+        <br>
+        <textarea id="content" name="content"
+                  rows="6" cols="40" required><%= post.body %></textarea>
+
+        <br><br>
+
+        <!-- submit button for saving changes -->
+        <button type="submit">Save Changes</button>
+
+    </form>
+
+    <br>
+
+    <!-- link to the homepage -->
+    <a href="/">Back to Home</a>
+
+</body>
+</html>

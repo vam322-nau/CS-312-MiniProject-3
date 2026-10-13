@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <!-- main heading -->
+    <h1>Sign In</h1>
+
+    <!-- display error message if login fails -->
+    <% if (error) { %>
+        <p class="error"><%= error %></p>
+    <% } %>
+
+    <!-- form for signing in -->
+    <form action="/signin" method="POST">
+
+        <!-- user ID -->
+        <label for="user_id">User ID:</label>
+        <input type="text" id="user_id"
+               name="user_id" required>
+
+        <br><br>
+
+        <!-- password -->
+        <label for="password">Password:</label>
+        <input type="password" id="password"
+               name="password" required>
+
+        <br><br>
+
+        <!-- submit button -->
+        <button type="submit">Sign In</button>
+    </form>
+
+    <!-- link to signup page -->
+    <p>Don't have an account?
+        <a href="/signup">Sign Up</a>
+    </p>
+
+    <!-- link to homepage -->
+    <p><a href="/">Back to Blog</a></p>
+
+</body>
+</html>
